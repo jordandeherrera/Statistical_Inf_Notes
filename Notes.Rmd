@@ -1,7 +1,9 @@
-Statistical Inference
-========================================================
-author: Jordan DeHerrera
-date: 11/4/2015
+---
+title: "Statistical Inference Notes"
+author: "Jordan S DeHerrera"
+output: html_document: 
+mathjax: "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+---
 
 ### PDF, PMF, CDF, and Survival Function
 
@@ -62,7 +64,7 @@ plot(x, y, lwd = 3, frame = FALSE, type = "l")
 
 Suppose the operator of the call center wanted to know the probability that their call center answered 75% or fewer of the calls?  This can be represented by the following graph:
 
-```{r, fig.height = 5, fig.width = 5, echo = FALSE, fig.align='center'}
+```{r, fig.height = 5, fig.width = 5, echo = TRUE, fig.align='center'}
 plot(x, y, lwd = 3, frame = FALSE, type = "l")
 polygon(c(0, .75, .75, 0), c(0, 0, 1.5, 0), lwd = 3, col = "lightblue")
 ```
