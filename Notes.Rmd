@@ -1,0 +1,107 @@
+Statistical Inference - PDF, PMF, CDF, and Survival Function
+========================================================
+author: Jordan DeHerrera
+date: 11/4/2015
+
+Probability Mass Function
+========================================================
+
+A probability mass function is the probability of a specific value occurring.
+
+- Mutually exclusive values (e.g., brunette, blonde, or redhead)
+- Can be used for experiment results (e.g., success or failure)
+
+Coin Flip Example of a Binomial Probability Function
+========================================================
+
+- Let $X$ be the result of a coin flip where $X=0$ represents
+tails and $X = 1$ represents heads.
+
+$$
+p(x) = (1/2)^{x} (1/2)^{1-x} ~~\mbox{ for }~~x = 0,1
+$$
+
+- Suppose that we do not know whether or not the coin is fair; Let
+$\theta$ be the probability of a head expressed as a proportion
+(between 0 and 1).
+
+$$
+p(x) = \theta^{x} (1 - \theta)^{1-x} ~~\mbox{ for }~~x = 0,1
+$$
+
+Probability Density Function
+========================================================
+
+A probability density function is the probability for a range of values occurring.
+
+- Any value on a continuum (e.g., height and weight)
+- The area under the line in a graph
+- Use area calculations to determine the probability density of two values
+
+Call Center Example of PDF
+========================================================
+
+The following example shows how a probability density function works for a very simple (and easily calculated density).
+- We are given the following function for a call center's performance:
+$$
+f(x) = \left\{\begin{array}{ll}
+    2 x & \mbox{ for } 1 > x > 0 \\
+    0                 & \mbox{ otherwise} 
+\end{array} \right. 
+$$
+
+Visual Demonstration of PDF
+========================================================
+
+- This is how we can visualize the shape of the distribution (note how it forms a perfect right triangle).
+- The area of the right triangle can be calculated as $$1/2 * b * h$$
+
+
+```r
+x <- c(-0.5, 0, 1, 1, 1.5); y <- c( 0, 0, 2, 0, 0)
+plot(x, y, lwd = 3, frame = FALSE, type = "l")
+```
+
+<img src="Statistical Inference - PDF, PMF, CDF, and Survival Function-figure/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
+
+
+Problem Statement
+========================================================
+
+Suppose the operator of the call center wanted to know the probability that their call center answered 75% or fewer of the calls?  This can be represented by the following graph:
+
+<img src="Statistical Inference - PDF, PMF, CDF, and Survival Function-figure/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+
+Solution
+========================================================
+
+To solve the problem, we just need to calculate the area of the triangle (the probability density function since we're looking for the probability of a distribution rather than a discrete value).
+
+
+```r
+1.5 * .75 / 2
+```
+
+```
+[1] 0.5625
+```
+
+```r
+pbeta(.75, 2, 1)
+```
+
+```
+[1] 0.5625
+```
+
+Cumulative Distribution Function and Survival Function
+========================================================
+
+
+Probability Distribution Function
+
+The probability of a distribution being less than a certain value.
+***
+Survival Function
+
+The probability of a distribution being greater than a certain value.
