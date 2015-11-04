@@ -1,8 +1,7 @@
 ---
 title: "Statistical Inference Notes"
 author: "Jordan S DeHerrera"
-output: html_document: 
-mathjax: "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+output: html_document
 ---
 
 ### PDF, PMF, CDF, and Survival Function
@@ -16,10 +15,10 @@ A probability mass function is the probability of a specific value occurring.
 
 #### Coin Flip Example of a Binomial Probability Function
 
-* Let $X$ be the result of a coin flip where $X=0$ represents
-tails and $X = 1$ represents heads.
+* Let $latex X$ be the result of a coin flip where $X=0$ represents
+tails and $latex X = 1$ represents heads.
 
-$$
+$$latex 
 p(x) = (1/2)^{x} (1/2)^{1-x} ~~\mbox{ for }~~x = 0,1
 $$
 
