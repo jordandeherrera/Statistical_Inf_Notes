@@ -87,3 +87,42 @@ The probability of a distribution being less than a certain value.
 ##### Survival Function
 
 The probability of a distribution being greater than a certain value.
+
+### Conditional Probability
+
+* Conditional probability (given additional information)
+* Bayes's theorem
+
+Let $B$ be an event so that $P(B) > 0$
+
+Then the conditional probability of an event $A$ given that $B$ has occurred is
+  $$
+  P(A ~|~ B) = P(B ~|~ A) * \frac{P(A)}{P(B)}
+  $$
+
+#### Monte Hall Game Show Problem
+
+* There are three doors in a game show
+* One door has a car behind it
+* The other two have goats
+* What is the probability that Door 3 has a car behind it, given the condition that you chose Door 2 and the game show host opened Door 1?
+
+#### Individual Probabilities
+
+##### Event Definitions and Probabilities
+
+* Event A is the probability of it being Door 3 $\frac{1}{3}$
+* Event B is the probability of choosing Door 2 AND the game show host opening Door 1 $$\frac{1}{3} * \frac{1}{2}$$
+
+* For the probability of Event B occurring given A, you have to think critically:
+  + If instead of choosing Door 2 and the game show host opening Door 1, what if we know for certain that the car was behind Door 3?
+  + Your choice is still random (e.g., $\frac{1}{3}$)
+  + But, now the host MUST open Door 1 (because the car is behind Door 3)
+  + Therefore, the probability of him opening Door 1 is 100% or 1
+  + The equation is as follows:  
+  
+$$
+\frac{1}{3} * 1 = \frac{1}{3}
+$$
+  
+* The full formula is:  $$\frac{1}{3} * \frac{\frac{1}{3}}{\frac{1}{6}} = \frac{2}{3}$$

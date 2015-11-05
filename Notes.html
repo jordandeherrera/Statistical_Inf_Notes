@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:06_StatisticalInference/01_02_Probability/index.Rmd</title>
+<title>PDF, PMF, CDF, and Survival Function</title>
 
 <style type="text/css">
 body, td {
@@ -182,23 +182,6 @@ hljs.initHighlightingOnLoad();
 </head>
 
 <body>
-<h2>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:06_StatisticalInference/01_02_Probability/index.Rmd</h2>
-
-<p>title       : Probability
-subtitle    : Statistical Inference
-author      : Brian Caffo, Jeff Leek, Roger Peng
-job         : Johns Hopkins Bloomberg School of Public Health
-logo        : bloomberg_shield.png
-framework   : io2012        # {io2012, html5slides, shower, dzslides, &hellip;}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
-url:
-  lib: ../../librariesNew
-  assets: ../../assets
-widgets     : [mathjax]            # {mathjax, quiz, bootstrap}</p>
-
-<h2>mode        : selfcontained # {standalone, draft}</h2>
-
 <h3>PDF, PMF, CDF, and Survival Function</h3>
 
 <h4>Probability Mass Function</h4>
@@ -303,6 +286,55 @@ polygon(c(0, .75, .75, 0), c(0, 0, 1.5, 0), lwd = 3, col = &quot;lightblue&quot;
 <h5>Survival Function</h5>
 
 <p>The probability of a distribution being greater than a certain value.</p>
+
+<h3>Conditional Probability</h3>
+
+<ul>
+<li>Conditional probability (given additional information)</li>
+<li>Bayes&#39;s theorem</li>
+</ul>
+
+<p>Let \( B \) be an event so that \( P(B) > 0 \)</p>
+
+<p>Then the conditional probability of an event \( A \) given that \( B \) has occurred is
+  \[ 
+  P(A ~|~ B) = P(B ~|~ A) * \frac{P(A)}{P(B)}
+   \]</p>
+
+<h4>Monte Hall Game Show Problem</h4>
+
+<ul>
+<li>There are three doors in a game show</li>
+<li>One door has a car behind it</li>
+<li>The other two have goats</li>
+<li>What is the probability that Door 3 has a car behind it, given the condition that you chose Door 2 and the game show host opened Door 1?</li>
+</ul>
+
+<h4>Individual Probabilities</h4>
+
+<h5>Event Definitions and Probabilities</h5>
+
+<ul>
+<li>Event A is the probability of it being Door 3 \( \frac{1}{3} \)</li>
+<li><p>Event B is the probability of choosing Door 2 AND the game show host opening Door 1 \[ \frac{1}{3} * \frac{1}{2} \]</p></li>
+<li><p>For the probability of Event B occurring given A, you have to think critically:</p>
+
+<ul>
+<li>If instead of choosing Door 2 and the game show host opening Door 1, what if we know for certain that the car was behind Door 3?</li>
+<li>Your choice is still random (e.g., \( \frac{1}{3} \))</li>
+<li>But, now the host MUST open Door 1 (because the car is behind Door 3)</li>
+<li>Therefore, the probability of him opening Door 1 is 100% or 1</li>
+<li>The equation is as follows:<br/></li>
+</ul></li>
+</ul>
+
+<p>\[ 
+\frac{1}{3} * 1 = \frac{1}{3}
+ \]</p>
+
+<ul>
+<li>The full formula is:  \[ \frac{1}{3} * \frac{\frac{1}{3}}{\frac{1}{6}} = \frac{2}{3} \]</li>
+</ul>
 
 </body>
 
